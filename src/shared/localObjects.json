@@ -1,0 +1,6 @@
+{
+"vehicleTypes":[
+    {"name":"Carro","value":"carros"},
+    {"name":"Caminhão","value":"caminhoes"}
+]
+}
