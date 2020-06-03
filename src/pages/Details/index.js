@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text} from 'react-native';
 import {getDetails} from '../../services/fipeService';
+import { styles } from './styles';
+import Header from '../../Components/Header';
 
 const Details = ({route}) => {
   //parametros da rota
@@ -23,18 +25,20 @@ const Details = ({route}) => {
   }, []);
 
   return (
-    <View>
-      <Text>{data?.referencia}</Text>
+    <View style={styles.View}>
+      
+      <Header style={styles.Header}/>
+      <Text style={styles.Text}><Text style={styles.Label}>Ano:</Text> {data?.referencia}</Text>
 
-      <Text>{data?.marca}</Text>
+      <Text style={styles.Text}><Text style={styles.Label}>Marca:</Text> {data?.marca}</Text>
 
-      <Text>{data?.name}</Text>
+      <Text style={styles.Text}><Text style={styles.Label}>Modelo:</Text> {data?.name}</Text>
 
-      <Text>{data?.ano_modelo}</Text>
+      <Text style={styles.Text}><Text style={styles.Label}>Ano:</Text> {data?.ano_modelo}</Text>
 
-      <Text>{data?.combustivel}</Text>
+      <Text style={styles.Text}><Text style={styles.Label}>Combustivel:</Text> {data?.combustivel}</Text>
 
-      <Text>{data?.preco}</Text>
+      <Text style={styles.Text}><Text style={styles.Label}>Preço médio:</Text> {data?.preco}</Text>
     </View>
   );
 };
